@@ -10,9 +10,9 @@ social platforms only after human review.
 
 ## Status
 
-This repository is currently documentation-first. The content structure is in
-place, but the website generator, content transformation scripts, tests, CI,
-and social publishing integrations have not been implemented yet.
+The website is a Jekyll site deployed by GitHub Actions to GitHub Pages.
+`contents/` remains the canonical source for articles. Social publishing,
+search, analytics, and content transformation are still future work.
 
 ## Editorial Workflow
 
@@ -35,6 +35,9 @@ approval.
 | [`images/`](images/) | Visual assets and future reusable templates |
 | [`scripts/`](scripts/) | Future validation, transformation, and publishing automation |
 | [`ai-friendly-docs/`](ai-friendly-docs/) | Focused documentation for contributors and agents |
+
+The complete publishing guide is in
+[`ai-friendly-docs/jekyll-manual.md`](ai-friendly-docs/jekyll-manual.md).
 
 The project roadmap and proposed architecture are documented in
 [`system_description.md`](system_description.md).
@@ -60,5 +63,6 @@ The longer-term system is intended to provide:
 - GitHub-based website deployment.
 - A publishing calendar and analytics for learning which ideas matter.
 
-Until those pieces exist, do not assume that build, test, deployment, or
-publishing commands are available in this repository.
+The repository includes a GitHub Pages workflow in
+[`.github/workflows/pages.yml`](.github/workflows/pages.yml). Local Jekyll
+preview is optional and requires Ruby; it is not needed to deploy the site.

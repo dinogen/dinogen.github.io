@@ -1,10 +1,17 @@
-# Benvenuto nel mio sito web!
-
-Questa è la pagina principale (Home Page) del progetto. Da qui puoi navigare verso le altre sezioni del sito utilizzando i link qui sotto.
-
-## Indice dei Contenuti
-*   [Vai alla Pagina 1](contents/ph1.md) – In questa sezione troverai i dettagli del primo progetto.
-*   [Vai alla Pagina 2](contents/ph2.md) – Clicca qui per visualizzare la seconda parte della documentazione.
-
 ---
-*Creato con GitHub Pages e Markdown.*
+title: Professional AI Programmer
+description: Shared thoughts about software engineering, AI and the future of development.
+---
+
+Welcome. This is a small, evolving knowledge base about software engineering,
+AI, data, architecture and legacy systems.
+
+## Articles
+
+{% assign articles = site.contents | sort: "date" | reverse %}
+{% for article in articles %}
+### [{{ article.title }}]({{ article.url | relative_url }})
+
+{{ article.excerpt | strip_html | strip_newlines | truncate: 180 }}
+
+{% endfor %}

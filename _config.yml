@@ -1,3 +1,36 @@
-theme: jekyll-theme-minimal
-title: Professional AI programmer
-description: Shared toughts about the new era of software development.
+title: Professional AI Programmer
+description: Thoughts about software engineering, AI and the future of development.
+url: "https://dinogen.github.io"
+baseurl: ""
+lang: en
+
+markdown: kramdown
+permalink: pretty
+
+collections:
+	contents:
+		output: true
+		permalink: /articles/:name/
+
+defaults:
+	- scope:
+			path: ""
+			type: "contents"
+		values:
+			layout: article
+	- scope:
+			path: ""
+		values:
+			layout: default
+
+exclude:
+	- Gemfile
+	- Gemfile.lock
+	- README.md
+	- AGENTS.md
+	- system_description.md
+	- ai-friendly-docs
+	- generated
+	- ideas
+	- images
+	- scripts

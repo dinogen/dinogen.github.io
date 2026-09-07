@@ -158,7 +158,9 @@ The website should contain:
 * Search
 * Links to social profiles
 
-A static-site generator such as **Hugo, Jekyll, Astro, or MkDocs** can be considered.
+The selected static-site generator is **Jekyll**. The canonical Markdown files
+in `contents/` are configured as a Jekyll collection and are deployed through
+GitHub Actions to GitHub Pages.
 
 ### Measurable Result
 

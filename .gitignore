@@ -159,6 +159,12 @@ ENV/
 env.bak/
 venv.bak/
 
+# Jekyll build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.bundle/
+
 # Spyder project settings
 .spyderproject
 .spyproject

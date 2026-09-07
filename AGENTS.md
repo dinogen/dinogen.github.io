@@ -1,10 +1,9 @@
 # context
 # Repository Guide
 
-This repository is a planned personal publishing system. Keep the canonical
-article in Markdown, then derive platform-specific drafts from it. Do not
-assume that planned automation exists: currently there are no scripts, tests,
-site generator, CI workflow, or dependency manifest in the checkout.
+This repository is a personal publishing system. Keep the canonical article in
+Markdown, then derive platform-specific drafts from it. The website uses
+Jekyll and is deployed by GitHub Actions; social automation is still planned.
 
 ## Index
 
@@ -13,8 +12,7 @@ site generator, CI workflow, or dependency manifest in the checkout.
 	content model, publication workflow, and implementation roadmap.
 - [.gitignore](.gitignore): ignored Python environments, build output, and
 	generated artifacts.
-- `contents/`: canonical article Markdown intended for the website. Currently
-	empty.
+- `contents/`: canonical article Markdown rendered by the Jekyll collection.
 - `generated/`: generated drafts for LinkedIn, X, and Instagram. Currently
 	empty.
 - `ideas/`: low-friction idea inbox. Currently empty.
@@ -48,8 +46,11 @@ The intended editorial flow is:
 
 `idea -> draft -> review -> canonical Markdown -> platform adaptations -> human approval -> publication`
 
-The intended website and social integrations are described in
-[system_description.md](system_description.md), but are not implemented yet.
+The website is implemented with Jekyll and deployed through
+`.github/workflows/pages.yml`. Social integrations are not implemented yet.
+
+For setup and publication instructions, read
+[ai-friendly-docs/jekyll-manual.md](ai-friendly-docs/jekyll-manual.md).
 
 ## Plans
 
